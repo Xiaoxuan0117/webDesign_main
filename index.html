@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="index">
+	<head>
+		<meta charset="utf-8"/>
+		<title> music </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="main.js"></script>
+	</head>
+	<body onload="sub()" class="index" id="index">	
+		<div class="start">
+            <img src="media/light.png" alt="" class="light light1">
+            <img src="media/light.png" alt="" class="light light2">
+            <div class="museum">
+                音樂。人生
+            </div>
+            <p class="landIn">#至少我們還有音樂</p>
+            <img src="media/player.png"class="player">
+            <img src="media/musicplayer.png" class="playmusic">
+            <div class="play"></div>
+            <div class="stop"></div>
+            <div class="stop2"></div>
+            <audio src="media/theme_song.mp3" class="audio" loop></audio>
+            
+            <span class="m1"><div class="music music1">音樂是人生的藝術</div></span>
+            <span class="m2"><div class="music music2">沒有音樂，生命是沒有價值的。</div></span>
+            <span class="m3"><div class="music music3">麥克風是我的樹洞，讓我把無人知曉、不能言說的心事，唱進歌裡，得以傾吐。 - 田馥甄</div></span>
+            <span class="m4"><div class="music music4">一張唱片，可以遠遠不只娛樂消遣，更能成為震撼時代的文化事件。 - 馬世芳</div></span>
+            <span class="m5"><div class="music music5">謝謝自己沒有被打倒，謝謝我自己死命地去唱歌，死命地繼續歌頌。- 吳青峰</div></span>
+            <span class="m6"><div class="music music6">相信再怎麼微小的事情，只要堅持下去，都能被人聽見；<br>謝謝音樂成為我們的刀與槍。- 尋人啟事</div></span>
+            <div class="container_big1" >
+                <div id="container_small1">
+                    <div class="page1 page1_1">
+                        <div class="container">
+                            <img src="media/Sentimental ballad.png" class="pop">
+                            <a href="soft.html">
+                                <div class="overlay">
+                                    <div class="text">點擊進入</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="page1 page1_2">
+                        <div class="page1 page1_1">
+                            <div class="container">
+                                <img src="media/rock_music.png" class="pop">
+                                <a href="rock.html">
+                                    <div class="overlay">
+                                        <div class="text">點擊進入</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page1 page1_3">
+                        <div class="container">
+                            <img src="media/rap.png" class="pop">
+                            <a href="./rap/rap.html">
+                                <div class="overlay">
+                                  <div class="text">點擊進入</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="page1 page1_3">
+                        <div class="container">
+                            <img src="media/R&B.png" class="pop">
+                            <a href="./randb/randb.html">
+                                <div class="overlay">
+                                  <div class="text">點擊進入</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="page1 page1_3">
+                        <div class="container">
+                            <img src="media/kpop.png" class="pop">
+                            <a href="./kpop/kpop.html">
+                                <div class="overlay">
+                                  <div class="text">點擊進入</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="page1 page1_3">
+                        <div class="container">
+                            <img src="media/pop.png" class="pop">
+                            <a href="pop.html">
+                                <div class="overlay">
+                                    <div class="text">點擊進入</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="media/turn.png" class="turn right"  onclick="right()">
+            <img src="media/turn.png" class="turn left" onclick="left()">
+        </div>
+        <div class="iframeBox">
+            <iframe src="https://script.google.com/macros/s/AKfycbyZM2aiKzJpv3fm-AKSdxht2vsiQsY1Zj1yc3WKWnZBXmbh7_kb5F5i5tov6AWQUpC_/exec" frameborder="0" marginheight="0" marginwidth="0"
+            width="100%" height="100%" scrolling="auto">
+            </iframe>
+        </div>
+        <img id="messageIcon" src="./media/message.png" alt="">
+
+        <script>
+            const messageIcon = document.getElementById('messageIcon')
+            let messageOpen = false
+            const iframe = document.getElementsByTagName('iframe')
+            messageIcon.addEventListener('click',()=>{
+                if(messageOpen==false){
+                    iframe[0].style.transform = "translateX(0%)"
+                    messageOpen=true
+                }else{
+                    iframe[0].style.transform = "translateX(-100%)"
+                    messageOpen=false
+                }
+            })
+        </script>
+	</body>
+</html>
